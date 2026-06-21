@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Makkaw planet
+{% endblock %}
+
+{% block body %}
+<h1>Makkaw planet</h1>
+<div>
+<p><strong>Greetings {{ greeting }}</strong>: all hail the Makkaw supreme ruler</p>
+<p>We have {{ numberOfMinions }} minions present today!</p>
+</div>
+<div>
+    <p>Today's supreme orders:</p>
+    <table>
+        <tr>
+            <th>Planet to destroy</th>
+            <td>{{ supremeOrdersOfTheDay.planetToDestroy }}</td>
+        </tr>
+        <tr>
+            <th>Planet to conquer</th>
+            <td>{{ supremeOrdersOfTheDay.planetToConquer }}</td>
+        </tr>
+        <tr>
+            <th>Planet to rule</th>
+            <td>{{ supremeOrdersOfTheDay.planetToRule }}</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

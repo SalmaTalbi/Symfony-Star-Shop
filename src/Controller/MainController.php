@@ -2,14 +2,29 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class MainController
+class MainController extends AbstractController
 {
     #[Route('/')]
-    public function homePage(): Response
+    public function homepage(): Response
     {
-        return new Response('<strong>Makkaw planet</strong>: all hail the Makkaw supreme ruler');
+
+        $greeting = 'Makkaw minions';
+        $numberOfMinions = "436";
+
+        $supremeOrdersOfTheDay = [
+            "planetToDestroy" => "Earth",
+            "planetToConquer" => "Mars",
+            "planetToRule" => "Jupiter"
+        ];
+
+        return $this->render('main/homepage.html.twig', [
+            'greeting' => $greeting,
+            'numberOfMinions' => $numberOfMinions,
+            'supremeOrdersOfTheDay' => $supremeOrdersOfTheDay
+        ]);
     }
 }
