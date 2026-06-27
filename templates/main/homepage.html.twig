@@ -8,22 +8,30 @@
 <h1>Makkaw planet</h1>
 <div>
 <p><strong>Greetings {{ greeting }}</strong>: all hail the Makkaw supreme ruler</p>
-<p>We have {{ numberOfMinions }} minions present today!</p>
+<p>We have {{ numberOfStarships }} starships present today!</p>
 </div>
 <div>
     <p>Today's supreme orders:</p>
     <table>
         <tr>
-            <th>Planet to destroy</th>
-            <td>{{ supremeOrdersOfTheDay.planetToDestroy }}</td>
+            <th>Starship name</th>
+            <td>{{ starship.name }}</td>
         </tr>
         <tr>
-            <th>Planet to conquer</th>
-            <td>{{ supremeOrdersOfTheDay.planetToConquer }}</td>
+            <th>Description</th>
+            <td>{{ starship.description }}</td>
         </tr>
         <tr>
-            <th>Planet to rule</th>
-            <td>{{ supremeOrdersOfTheDay.planetToRule }}</td>
+            <th>Class</th>
+            <td>{{ starship.class }}</td>
+        </tr>
+        <tr>
+            <th>Captain</th>
+            <td>{{ starship.captain }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ starship.status }}</td>
         </tr>
     </table>
 </div>
